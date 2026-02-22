@@ -20,4 +20,5 @@ urlpatterns = [
 
     # RSVP
     path("event/<int:event_id>/rsvp/", views.rsvp_event, name="rsvp_event"),
+ 
 ]
