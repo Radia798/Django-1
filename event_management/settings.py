@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t!kjbftmto2^1+c9v0p8$j_=#k%u-2x6#)=m%5(f5qlrdj%d+a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["django-1-ogdy.onrender.com"]
 
 
 # Application definition
@@ -117,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 
 # Media files (for user profile pictures and event images)
 MEDIA_URL = '/media/'
@@ -126,3 +126,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # Email backend for development (prints emails to console)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'noreply@example.com'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
