@@ -1,0 +1,24 @@
+{% extends "events/base.html" %}
+{% block content %}
+
+<form method="get" class="mb-4">
+  <input name="search" placeholder="Search by name or location"
+         class="border p-2 w-full">
+</form>
+
+<div class="grid md:grid-cols-2 gap-4">
+{% for event in events %}
+  <div class="bg-white p-4 shadow">
+    <h2 class="font-bold">{{ event.name }}</h2>
+    <p>{{ event.location }}</p>
+    <p>Category: {{ event.category.name }}</p>
+    <p>Participants: {{ event.participants.count }}</p>
+
+    <a href="/event/{{event.id}}/" class="text-blue-500">View</a> |
+    <a href="/edit/{{event.id}}/" class="text-green-500">Edit</a> |
+    <a href="/delete/{{event.id}}/" class="text-red-500">Delete</a>
+  </div>
+{% endfor %}
+</div>
+
+{% endblock %}

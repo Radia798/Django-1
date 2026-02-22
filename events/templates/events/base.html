@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<nav class="bg-blue-600 text-white p-4">
+  <a href="/" class="mr-4">Events</a>
+  <a href="/add/" class="mr-4">Add Event</a>
+  <a href="/dashboard/">Dashboard</a>
+</nav>
+
+<div class="p-6">
+  {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
